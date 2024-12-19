@@ -13,16 +13,13 @@ const FancyCard = () => {
           style={styles.cardImage}
         />
         <View style={styles.cardBody}>
-          <Text style={styles.cardTitle}>Hawa Mahel</Text>
+          <Text style={styles.cardTitle}>Hawa Mahal</Text>
           <Text style={styles.cardLabel}>Pink City Jaipur</Text>
           <Text style={styles.cardDescription}>
             The Hawa Mahal is a palace in the city of Jaipur, Rajasthan, India.
             Built from red and pink sandstone, it is on the edge of the City
             Palace, Jaipur, and extends to the Zenana, or women's chambers. Hawa
-            Mahal is known as the “ palace of winds “. Maharaja Sawai Pratap
-            Singh built it palace in 1799. Hawa Mahal is considered to be unique
-            as it has many small windows and balconies that seem like a
-            honeycomb.
+            Mahal is known as the “ palace of winds “.
           </Text>
           <Text style={styles.cardFooter}>12 mins away</Text>
         </View>
@@ -40,15 +37,44 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
   },
   card: {
-    padding: 16,
+    width: 350,
+    height: 350,
+    borderRadius: 4,
+    marginVertical: 12,
+    marginHorizontal: 16,
   },
-  cardElevated: {},
+  cardElevated: {
+    backgroundColor: 'lightgray',
+    elevation: 4,
+  },
   cardImage: {
+    resizeMode: 'stretch',
     height: 200,
+    marginBottom: 8,
+    borderTopLeftRadius: 4,
+    borderTopRightRadius: 4,
   },
-  cardBody: {},
-  cardTitle: {},
-  cardLabel: {},
-  cardDescription: {},
-  cardFooter: {},
+  cardBody: {
+    flex: 1,
+    paddingHorizontal: 12,
+  },
+  cardTitle: {
+    fontSize: 22,
+    fontWeight: 'bold',
+    marginBottom: 8,
+  },
+  cardLabel: {
+    fontSize: 14,
+    fontWeight: 'bold',
+    marginBottom: 8,
+  },
+  cardDescription: {
+    fontSize: 12,
+    marginBottom: 8,
+    flexShrink: 1,
+  },
+  cardFooter: {
+    fontSize: 14,
+    marginBottom: 8,
+  },
 });
